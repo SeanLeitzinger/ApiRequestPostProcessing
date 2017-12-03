@@ -11,7 +11,10 @@ namespace ApiRequestPostProcessing.Api.Requests.User
 
         public async Task<IActionResult> Handle()
         {
-            return new OkObjectResult(new FakeUser().Generate()) { DeclaredType = typeof(ApiRequestPostProcess.Core.Models.User) };
+            return new OkObjectResult(new FakeUser().Generate())
+            {
+                DeclaredType = typeof(ApiRequestPostProcess.Core.Models.User)
+            };
         }
     }
 }
